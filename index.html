@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>YourTube Vanilla JS</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Content here -->
+        <nav class="p-3 mb-2 bg-primary text-white" class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">YourTube</span>
+        </nav>
+
+
+        
+        <button style="color: white; background-color: red; cursor: pointer;" onclick="authenticate().then(loadClient)">Authorize & load</button>
+        <button style="color: white; background-color: blue; cursor: pointer;" onclick="execute()">Execute</button>
+        
+        
+        
+        <ul id="playlist" class="list-group list-group-horizontal" style="cursor: pointer;">
+        </ul>
+
+
+        <div id="items" class="text-success">Click on authorize and load and then on execute</div>
+
+    </div>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='config.js'></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="main.js"></script> 
+</body>
+</html>
