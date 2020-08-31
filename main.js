@@ -1,12 +1,13 @@
-var mykey = config.MY_KEY;
-var myid = config.MY_ID;
-
 function authenticate() {
     return gapi.auth2.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
         .then(function() { console.log("Sign-in successful"); },
               function(err) { console.error("Error signing in", err); });
 }
+var mykey = config.MY_KEY;
+var myid = config.MY_ID;
+
+
 function loadClient() {
     gapi.client.setApiKey(mykey);
     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
